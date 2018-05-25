@@ -1,0 +1,1513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HomeCare.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cfgApp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="AppName" Type="nvarchar" MaxLength="20" />
+    <Property Name="AppLogo" Type="varchar" MaxLength="30" />
+    <Property Name="HuanXin_Key" Type="varchar" MaxLength="50" />
+    <Property Name="HuanXin_Id" Type="varchar" MaxLength="50" />
+    <Property Name="HuanXin_Secret" Type="varchar" MaxLength="50" />
+    <Property Name="Jpush_Key" Type="varchar" MaxLength="50" />
+    <Property Name="Jpush_Secret" Type="varchar" MaxLength="50" />
+    <Property Name="WeiXin_AppId" Type="varchar" MaxLength="50" />
+    <Property Name="WeiXin_MchId" Type="varchar" MaxLength="50" />
+    <Property Name="WeiXin_Key" Type="varchar" MaxLength="50" />
+    <Property Name="WeiXin_Secret" Type="varchar" MaxLength="50" />
+    <Property Name="WeiXin_Ip" Type="varchar" MaxLength="20" />
+    <Property Name="Ali_PublicKey" Type="varchar" MaxLength="50" />
+    <Property Name="Ali_Private" Type="varchar" MaxLength="50" />
+    <Property Name="Ali_AppId" Type="varchar" MaxLength="50" />
+    <Property Name="Agora_Key" Type="varchar" MaxLength="50" />
+    <Property Name="GaoDeKey" Type="varchar" MaxLength="50" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cfgAreaInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NodeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentId" Type="int" Nullable="false" />
+    <Property Name="ParentIdList" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="State" Type="int" Nullable="false" />
+    <Property Name="TreePath" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TreeLevel" Type="int" Nullable="false" />
+    <Property Name="Service" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cfgCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Icon" Type="varchar" MaxLength="25" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="ParentId" Type="int" Nullable="false" />
+    <Property Name="ParentIdList" Type="varchar" MaxLength="500" />
+    <Property Name="Sort" Type="tinyint" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cfgSite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Keywords" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserAgreement" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Copyright" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="PoweredBy" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="RecordNumber" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CustomerPhone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="AutoEvaluate" Type="int" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DefaultCardId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqBeiTai_BloodPressure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Member_Id" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="Result" Type="nvarchar" MaxLength="15" />
+    <Property Name="Test_Time" Type="datetime" />
+    <Property Name="Systolic" Type="float" Nullable="false" />
+    <Property Name="Diastolic" Type="float" Nullable="false" />
+    <Property Name="Pulse" Type="float" Nullable="false" />
+    <Property Name="Did" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Dtype" Type="int" />
+    <Property Name="IdCard" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqBeiTai_BloodSugar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Member_Id" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="Result" Type="nvarchar" MaxLength="15" />
+    <Property Name="Test_Time" Type="datetime" />
+    <Property Name="Fpg" Type="float" Nullable="false" />
+    <Property Name="Meal" Type="tinyint" Nullable="false" />
+    <Property Name="Did" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Dtype" Type="int" />
+    <Property Name="IdCard" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqBeiTai_BodyFat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Member_Id" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="Result" Type="nvarchar" MaxLength="15" />
+    <Property Name="Test_Time" Type="datetime" />
+    <Property Name="Moisture" Type="float" Nullable="false" />
+    <Property Name="Fat_Grade" Type="float" Nullable="false" />
+    <Property Name="Muscle" Type="float" Nullable="false" />
+    <Property Name="Fat_Per" Type="float" Nullable="false" />
+    <Property Name="Did" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Dtype" Type="int" />
+    <Property Name="IdCard" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqBeiTai_Temp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Member_Id" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="Result" Type="nvarchar" MaxLength="15" />
+    <Property Name="Test_Time" Type="datetime" />
+    <Property Name="Temp_Data" Type="float" Nullable="false" />
+    <Property Name="Did" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Dtype" Type="int" />
+    <Property Name="IdCard" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqBeiTai_Weight">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Member_Id" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="Result" Type="nvarchar" MaxLength="15" />
+    <Property Name="Test_Time" Type="datetime" />
+    <Property Name="Weight_Data" Type="float" Nullable="false" />
+    <Property Name="Did" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Dtype" Type="int" />
+    <Property Name="IdCard" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqEquipment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Sim" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Elec" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Online" Type="bit" Nullable="false" />
+    <Property Name="OnlineTime" Type="datetime" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqEquipment_Mattress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="eqEquipment_Watch">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="GPSInterval" Type="int" Nullable="false" />
+    <Property Name="SitWarningDuration" Type="int" />
+    <Property Name="HeartRange" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SleepRange" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="HeartRateInterval" Type="int" Nullable="false" />
+    <Property Name="IsPosition" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DatePosition" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="LatitudeConv" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="LongitudeConv" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ConvertType" Type="tinyint" Nullable="false" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SOSPhone" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsHeartRangeStat" Type="bit" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="eqFence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="LatLon" Type="varchar" MaxLength="500" />
+    <Property Name="Radius" Type="int" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="Type" Type="tinyint" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="eqHealthData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="Weight_Data" Type="float" Nullable="false" />
+    <Property Name="WeightTest_Time" Type="datetime" />
+    <Property Name="Temp_Data" Type="float" Nullable="false" />
+    <Property Name="TempTest_Time" Type="datetime" />
+    <Property Name="Systolic" Type="float" Nullable="false" />
+    <Property Name="Diastolic" Type="float" Nullable="false" />
+    <Property Name="Pulse" Type="float" Nullable="false" />
+    <Property Name="BloodPressureTest_Time" Type="datetime" />
+    <Property Name="Moisture" Type="float" Nullable="false" />
+    <Property Name="Fat_Grade" Type="float" Nullable="false" />
+    <Property Name="Muscle" Type="float" Nullable="false" />
+    <Property Name="Fat_Per" Type="float" Nullable="false" />
+    <Property Name="BodyFatTest_Time" Type="datetime" />
+    <Property Name="Fpg" Type="float" Nullable="false" />
+    <Property Name="FpgTest_Time" Type="datetime" />
+    <Property Name="HeartRate" Type="int" Nullable="false" />
+    <Property Name="HeartRateTest_Time" Type="datetime" />
+    <Property Name="TrunOver" Type="int" Nullable="false" />
+    <Property Name="Time" Type="int" Nullable="false" />
+    <Property Name="SleepTest_Time" Type="datetime" />
+    <Property Name="Steps" Type="int" Nullable="false" />
+    <Property Name="StepsTest_Time" Type="datetime" />
+    <Property Name="SitTime" Type="int" Nullable="false" />
+    <Property Name="SitTime_Time" Type="datetime" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="varchar" MaxLength="8" />
+    <Property Name="Time" Type="varchar" MaxLength="6" />
+    <Property Name="IsPosition" Type="varchar" MaxLength="10" />
+    <Property Name="Latitude" Type="varchar" MaxLength="20" />
+    <Property Name="Longitude" Type="varchar" MaxLength="20" />
+    <Property Name="Speed" Type="varchar" MaxLength="10" />
+    <Property Name="Direction" Type="varchar" MaxLength="10" />
+    <Property Name="Altitude" Type="varchar" MaxLength="10" />
+    <Property Name="BaseStation" Type="varchar" MaxLength="200" />
+    <Property Name="WiFi" Type="varchar" MaxLength="200" />
+    <Property Name="Elec" Type="varchar" MaxLength="10" />
+    <Property Name="Gsensor" Type="varchar" MaxLength="10" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="LatitudeConv" Type="varchar" MaxLength="20" />
+    <Property Name="LongitudeConv" Type="varchar" MaxLength="20" />
+    <Property Name="FenceWarn" Type="tinyint" />
+    <Property Name="FenceId" Type="int" />
+    <Property Name="StayDate" Type="datetime" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="eqMattress_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="DataType" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Data" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MarkTime" Type="datetime" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="eqWarning">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqWatch_Heart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="HeartRate" Type="int" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqWatch_OutlineData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="SOSCmd" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="FamilyCmd" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="GPSIntervalCmd" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="HeartRateIntervalCmd" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SleepRangeCmd" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RemindCustom1Cmd" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="RemindCustom2Cmd" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="RemindCustom3Cmd" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="eqWatch_Remind">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="RemindType" Type="int" Nullable="false" />
+    <Property Name="Contents" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Weeks" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="RemindTimes" Type="varchar" MaxLength="50" />
+    <Property Name="Repeat" Type="bit" />
+    <Property Name="State" Type="tinyint" />
+    <Property Name="VoiceFile" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="eqWatch_Sit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="Sit" Type="int" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqWatch_Sleep">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="Time" Type="int" Nullable="false" />
+    <Property Name="ShallowSleepTime" Type="int" Nullable="false" />
+    <Property Name="DeepSleepTime" Type="int" Nullable="false" />
+    <Property Name="TrunOver" Type="int" Nullable="false" />
+    <Property Name="GetUpNum" Type="int" Nullable="false" />
+    <Property Name="DateStart" Type="datetime" Nullable="false" />
+    <Property Name="DateEnd" Type="datetime" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqWatch_Step">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imei" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="Steps" Type="int" Nullable="false" />
+    <Property Name="Distance" Type="int" />
+    <Property Name="Calories" Type="float" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoAdvert">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Img" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="DateStart" Type="datetime" Nullable="false" />
+    <Property Name="DateEnd" Type="datetime" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="Reads" Type="int" Nullable="false" />
+    <Property Name="Sort" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoAppVersion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppType" Type="tinyint" Nullable="false" />
+    <Property Name="VersionNum" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AppUrl" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoArticle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="Author" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Img" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Video" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Source" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Summary" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Contents" Type="text" Nullable="false" />
+    <Property Name="keyWords" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Reads" Type="int" Nullable="false" />
+    <Property Name="Recommend" Type="bit" Nullable="false" />
+    <Property Name="Sort" Type="tinyint" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoArticleTags">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArticleId" Type="int" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoFile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FilePath" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Extend" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Size" Type="int" Nullable="false" />
+    <Property Name="FromTable" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="FromId" Type="int" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoMedicine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="MedicineName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MedicineUnit" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="MedicineUsed" Type="int" Nullable="false" />
+    <Property Name="MedicineTotal" Type="int" Nullable="false" />
+    <Property Name="MedicineSurplus" Type="int" Nullable="false" />
+    <Property Name="StarDate" Type="datetime" Nullable="false" />
+    <Property Name="RemindDate" Type="datetime" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoMedicine_AddLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MedicineId" Type="int" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="IsRemind" Type="bit" Nullable="false" />
+    <Property Name="MedicineUnit" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="MedicineTotal" Type="int" Nullable="false" />
+    <Property Name="MedicineSurplus" Type="int" Nullable="false" />
+    <Property Name="Doses" Type="int" Nullable="false" />
+    <Property Name="RemainNum" Type="int" Nullable="false" />
+    <Property Name="TakingNum" Type="int" Nullable="false" />
+    <Property Name="TakingUnit" Type="tinyint" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoMedicine_ChangeLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MedicineId" Type="int" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="MedicineChange" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageType" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Contents" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ObjectId" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="SendId" Type="int" Nullable="false" />
+    <Property Name="SendToAll" Type="bit" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoMessageUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="MessageId" Type="int" Nullable="false" />
+    <Property Name="IsRead" Type="bit" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="logUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IP" Type="varchar" MaxLength="20" />
+    <Property Name="Url" Type="varchar" MaxLength="200" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="pmAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountType" Type="tinyint" Nullable="false" />
+    <Property Name="AccountName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AccountPassword" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="Token" Type="varchar" MaxLength="36" />
+    <Property Name="TokenTime" Type="datetime" />
+    <Property Name="TokenOutTime" Type="datetime" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmFeedback">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" />
+    <Property Name="Contents" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="MobliePhone" Type="varchar" MaxLength="20" />
+    <Property Name="ContentsReply" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmInfo_Doctor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Sex" Type="bit" Nullable="false" />
+    <Property Name="IDCard" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HeadImg" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Position" Type="int" Nullable="false" />
+    <Property Name="Department" Type="int" Nullable="false" />
+    <Property Name="ReservationMoney" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Specialty" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Province" Type="int" Nullable="false" />
+    <Property Name="City" Type="int" Nullable="false" />
+    <Property Name="Area" Type="int" Nullable="false" />
+    <Property Name="Street" Type="int" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmInfo_Elderly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="ElderlyType" Type="int" Nullable="false" />
+    <Property Name="ElderlyName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ElderlyNo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="IDCard" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Sex" Type="bit" Nullable="false" />
+    <Property Name="Height" Type="float" Nullable="false" />
+    <Property Name="BornYM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Weight" Type="float" Nullable="false" />
+    <Property Name="HeadImg" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="BloodType" Type="tinyint" Nullable="false" />
+    <Property Name="NurseRequires" Type="int" Nullable="false" />
+    <Property Name="Province" Type="int" Nullable="false" />
+    <Property Name="City" Type="int" Nullable="false" />
+    <Property Name="Area" Type="int" Nullable="false" />
+    <Property Name="Street" Type="int" Nullable="false" />
+    <Property Name="AreaInfo" Type="int" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ContactTelephone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Sort" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="Groupid" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmInfo_User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Sex" Type="bit" Nullable="false" />
+    <Property Name="IDCard" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Birth" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HeadImg" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Province" Type="int" Nullable="false" />
+    <Property Name="City" Type="int" Nullable="false" />
+    <Property Name="Area" Type="int" Nullable="false" />
+    <Property Name="Street" Type="int" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Telephone" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmPersonalService">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ContactTelephone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="HeadImg" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Department" Type="int" Nullable="false" />
+    <Property Name="Specialty" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Province" Type="int" Nullable="false" />
+    <Property Name="City" Type="int" Nullable="false" />
+    <Property Name="Area" Type="int" Nullable="false" />
+    <Property Name="Street" Type="int" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmPersonalService_Elderly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="PersonalServList" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmRelation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="Relation" Type="tinyint" Nullable="false" />
+    <Property Name="ParentId" Type="int" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmSettlement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SettlementNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="OrderIds" Type="varchar(max)" Nullable="false" />
+    <Property Name="Paid" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="PaidToWaiter" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmTag">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="TagId" Type="int" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportCheckUp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="DateCheckUp" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportChronicDisease">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="DateReport" Type="varchar" MaxLength="10" />
+    <Property Name="BloodPressure" Type="nvarchar" MaxLength="80" />
+    <Property Name="BloodSugar" Type="nvarchar" MaxLength="80" />
+    <Property Name="Temp" Type="nvarchar" MaxLength="80" />
+    <Property Name="Weight" Type="nvarchar" MaxLength="80" />
+    <Property Name="BodyFat" Type="nvarchar" MaxLength="80" />
+    <Property Name="DoctorReport" Type="nvarchar" MaxLength="500" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportDaily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="DateReport" Type="varchar" MaxLength="10" />
+    <Property Name="Steps" Type="nvarchar" MaxLength="25" />
+    <Property Name="Sleeps" Type="nvarchar" MaxLength="25" />
+    <Property Name="Heart" Type="nvarchar" MaxLength="25" />
+    <Property Name="Sit" Type="nvarchar" MaxLength="25" />
+    <Property Name="Custody" Type="nvarchar" MaxLength="200" />
+    <Property Name="HealthReport" Type="nvarchar" MaxLength="500" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportMedicalHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="MedicalHistory" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="DurationTime" Type="int" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportNursing">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="DateReport" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tags" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Contents" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servCallLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CallType" Type="tinyint" Nullable="false" />
+    <Property Name="CallNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CallDate" Type="datetime" Nullable="false" />
+    <Property Name="CallById" Type="int" Nullable="false" />
+    <Property Name="CallToId" Type="int" Nullable="false" />
+    <Property Name="Action" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servCard">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CardName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Icon" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Sort" Type="tinyint" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="ValidTime" Type="int" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servCard_Elderly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CardNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CardId" Type="int" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="DateEnd" Type="datetime" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servCard_ElderlyProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="CardNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="TimesFree" Type="int" Nullable="false" />
+    <Property Name="TimesUnit" Type="tinyint" />
+    <Property Name="TimesUsed" Type="int" Nullable="false" />
+    <Property Name="DateEnd" Type="datetime" Nullable="false" />
+    <Property Name="State" Type="tinyint" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servCard_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CardId" Type="int" Nullable="false" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="TimesFree" Type="int" Nullable="false" />
+    <Property Name="TimesUnit" Type="tinyint" Nullable="false" />
+    <Property Name="Sort" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="WaiterId" Type="int" Nullable="false" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="DateService" Type="datetime" Nullable="false" />
+    <Property Name="Paid" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="PaidTotal" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="IsSignIn" Type="bit" Nullable="false" />
+    <Property Name="Province" Type="int" Nullable="false" />
+    <Property Name="City" Type="int" Nullable="false" />
+    <Property Name="Area" Type="int" Nullable="false" />
+    <Property Name="Street" Type="int" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="10" />
+    <Property Name="Telephone" Type="varchar" MaxLength="20" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsPaid" Type="bit" Nullable="false" />
+    <Property Name="PaidType" Type="bit" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="PaidToWaiter" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="DateSuccess" Type="datetime" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servOrder_Evaluate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="WaiterId" Type="int" Nullable="false" />
+    <Property Name="Evaluate" Type="nvarchar" MaxLength="50" />
+    <Property Name="EvaluateTags" Type="varchar" MaxLength="50" />
+    <Property Name="EvaluateScore" Type="int" />
+    <Property Name="EvaluateDate" Type="datetime" />
+    <Property Name="WaiterEvaluate" Type="nvarchar" MaxLength="50" />
+    <Property Name="WaiterEvaluateTags" Type="varchar" MaxLength="50" />
+    <Property Name="WaiterEvaluateScore" Type="int" />
+    <Property Name="WaiterEvaluateDate" Type="datetime" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servOrder_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="30" />
+    <Property Name="Free" Type="bit" Nullable="false" />
+    <Property Name="TimeService" Type="int" Nullable="false" />
+    <Property Name="TimeUnit" Type="tinyint" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="PriceUnit" Type="tinyint" />
+    <Property Name="Paid" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servOrder_Waiter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="WaiterId" Type="int" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="CheckIn" Type="datetime" />
+    <Property Name="CheckInLoaction" Type="varchar" MaxLength="30" />
+    <Property Name="CheckInImg" Type="varchar" MaxLength="25" />
+    <Property Name="CheckOut" Type="datetime" />
+    <Property Name="CheckOutLoaction" Type="varchar" MaxLength="30" />
+    <Property Name="CheckOutImg" Type="varchar" MaxLength="25" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectType" Type="tinyint" />
+    <Property Name="ParentId" Type="int" Nullable="false" />
+    <Property Name="ServiceName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Icon" Type="varchar" MaxLength="25" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="PriceUnit" Type="tinyint" Nullable="false" />
+    <Property Name="IsSignIn" Type="bit" Nullable="false" />
+    <Property Name="IsSelect" Type="bit" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servReservation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="ReservationDate" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="StarTime" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="EndTime" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="ReservationNum" Type="int" Nullable="false" />
+    <Property Name="RemainNum" Type="int" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servVisit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ElderlyId" Type="int" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="State" Type="tinyint" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="BelongId" Type="int" Nullable="false" />
+    <Property Name="BelongIds" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="SysFunctions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PFid" Type="int" Nullable="false" />
+    <Property Name="FName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FUrl" Type="varchar" MaxLength="100" />
+    <Property Name="FQuary" Type="varchar" MaxLength="100" />
+    <Property Name="FButtonId" Type="varchar" MaxLength="50" />
+    <Property Name="FRemark" Type="varchar" MaxLength="50" />
+    <Property Name="FState" Type="int" />
+    <Property Name="FSort" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="64" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SysRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="State" Type="int" />
+    <Property Name="Remark" Type="varchar" MaxLength="100" />
+    <Property Name="Fids" Type="varchar" MaxLength="1000" />
+    <Property Name="Reads" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SysUser_Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="Rids" Type="varchar" MaxLength="100" />
+    <Property Name="CreateById" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateById" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_cdservCard_Service_seServiceInfo">
+    <End Role="servProject" Type="Self.servProject" Multiplicity="1" />
+    <End Role="servCard_Project" Type="Self.servCard_Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servProject">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="servCard_Project">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pmProject_servProject">
+    <End Role="servProject" Type="Self.servProject" Multiplicity="1" />
+    <End Role="pmProject" Type="Self.pmProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servProject">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="pmProject">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pmRelation_pmAccount">
+    <End Role="pmAccount" Type="Self.pmAccount" Multiplicity="1" />
+    <End Role="pmRelation" Type="Self.pmRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pmAccount">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="pmRelation">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HomeCareStoreContainer">
+    <EntitySet Name="cfgApp" EntityType="Self.cfgApp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cfgAreaInfo" EntityType="Self.cfgAreaInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cfgCategory" EntityType="Self.cfgCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cfgSite" EntityType="Self.cfgSite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqBeiTai_BloodPressure" EntityType="Self.eqBeiTai_BloodPressure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqBeiTai_BloodSugar" EntityType="Self.eqBeiTai_BloodSugar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqBeiTai_BodyFat" EntityType="Self.eqBeiTai_BodyFat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqBeiTai_Temp" EntityType="Self.eqBeiTai_Temp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqBeiTai_Weight" EntityType="Self.eqBeiTai_Weight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqEquipment" EntityType="Self.eqEquipment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqEquipment_Mattress" EntityType="Self.eqEquipment_Mattress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqEquipment_Watch" EntityType="Self.eqEquipment_Watch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqFence" EntityType="Self.eqFence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqHealthData" EntityType="Self.eqHealthData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqLocation" EntityType="Self.eqLocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqMattress_Data" EntityType="Self.eqMattress_Data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqWarning" EntityType="Self.eqWarning" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqWatch_Heart" EntityType="Self.eqWatch_Heart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqWatch_OutlineData" EntityType="Self.eqWatch_OutlineData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqWatch_Remind" EntityType="Self.eqWatch_Remind" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqWatch_Sit" EntityType="Self.eqWatch_Sit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqWatch_Sleep" EntityType="Self.eqWatch_Sleep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eqWatch_Step" EntityType="Self.eqWatch_Step" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="infoAdvert" EntityType="Self.infoAdvert" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="infoAppVersion" EntityType="Self.infoAppVersion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="infoArticle" EntityType="Self.infoArticle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="infoArticleTags" EntityType="Self.infoArticleTags" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="infoFile" EntityType="Self.infoFile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="infoMedicine" EntityType="Self.infoMedicine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="infoMedicine_AddLog" EntityType="Self.infoMedicine_AddLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="infoMedicine_ChangeLog" EntityType="Self.infoMedicine_ChangeLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="infoMessage" EntityType="Self.infoMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="infoMessageUser" EntityType="Self.infoMessageUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="logUser" EntityType="Self.logUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmAccount" EntityType="Self.pmAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmFeedback" EntityType="Self.pmFeedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmInfo_Doctor" EntityType="Self.pmInfo_Doctor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmInfo_Elderly" EntityType="Self.pmInfo_Elderly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmInfo_User" EntityType="Self.pmInfo_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmPersonalService" EntityType="Self.pmPersonalService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmPersonalService_Elderly" EntityType="Self.pmPersonalService_Elderly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmProject" EntityType="Self.pmProject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmRelation" EntityType="Self.pmRelation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmSettlement" EntityType="Self.pmSettlement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmTag" EntityType="Self.pmTag" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reportCheckUp" EntityType="Self.reportCheckUp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reportChronicDisease" EntityType="Self.reportChronicDisease" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reportDaily" EntityType="Self.reportDaily" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reportMedicalHistory" EntityType="Self.reportMedicalHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reportNursing" EntityType="Self.reportNursing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servCallLog" EntityType="Self.servCallLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servCard" EntityType="Self.servCard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servCard_Elderly" EntityType="Self.servCard_Elderly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servCard_ElderlyProject" EntityType="Self.servCard_ElderlyProject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servCard_Project" EntityType="Self.servCard_Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servOrder" EntityType="Self.servOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servOrder_Evaluate" EntityType="Self.servOrder_Evaluate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servOrder_Project" EntityType="Self.servOrder_Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servOrder_Waiter" EntityType="Self.servOrder_Waiter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servProject" EntityType="Self.servProject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servReservation" EntityType="Self.servReservation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servVisit" EntityType="Self.servVisit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysFunctions" EntityType="Self.SysFunctions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysRoles" EntityType="Self.SysRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysUser_Roles" EntityType="Self.SysUser_Roles" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_cdservCard_Service_seServiceInfo" Association="Self.FK_cdservCard_Service_seServiceInfo">
+      <End Role="servProject" EntitySet="servProject" />
+      <End Role="servCard_Project" EntitySet="servCard_Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pmProject_servProject" Association="Self.FK_pmProject_servProject">
+      <End Role="servProject" EntitySet="servProject" />
+      <End Role="pmProject" EntitySet="pmProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pmRelation_pmAccount" Association="Self.FK_pmRelation_pmAccount">
+      <End Role="pmAccount" EntitySet="pmAccount" />
+      <End Role="pmRelation" EntitySet="pmRelation" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

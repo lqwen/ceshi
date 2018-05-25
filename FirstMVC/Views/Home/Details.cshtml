@@ -1,0 +1,146 @@
+﻿@model FirstMVC.Models.cfgCategory
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>cfgCategory</h4>
+    	<hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Icon)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Icon)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Remark)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Remark)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ParentId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ParentId)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ParentIdList)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ParentIdList)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Sort)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Sort)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.State)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.State)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CreateById)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CreateById)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CreateBy)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CreateBy)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CreateDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CreateDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.UpdateById)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UpdateById)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.UpdateBy)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UpdateBy)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.UpdateDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UpdateDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BelongId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BelongId)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BelongIds)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BelongIds)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

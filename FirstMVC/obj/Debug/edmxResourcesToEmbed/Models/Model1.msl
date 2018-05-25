@@ -1,0 +1,1465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HomeCareStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="cfgApp">
+      <EntityTypeMapping TypeName="HomeCare.cfgApp">
+        <MappingFragment StoreEntitySet="cfgApp">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="AppName" ColumnName="AppName" />
+          <ScalarProperty Name="AppLogo" ColumnName="AppLogo" />
+          <ScalarProperty Name="HuanXin_Key" ColumnName="HuanXin_Key" />
+          <ScalarProperty Name="HuanXin_Id" ColumnName="HuanXin_Id" />
+          <ScalarProperty Name="HuanXin_Secret" ColumnName="HuanXin_Secret" />
+          <ScalarProperty Name="Jpush_Key" ColumnName="Jpush_Key" />
+          <ScalarProperty Name="Jpush_Secret" ColumnName="Jpush_Secret" />
+          <ScalarProperty Name="WeiXin_AppId" ColumnName="WeiXin_AppId" />
+          <ScalarProperty Name="WeiXin_MchId" ColumnName="WeiXin_MchId" />
+          <ScalarProperty Name="WeiXin_Key" ColumnName="WeiXin_Key" />
+          <ScalarProperty Name="WeiXin_Secret" ColumnName="WeiXin_Secret" />
+          <ScalarProperty Name="WeiXin_Ip" ColumnName="WeiXin_Ip" />
+          <ScalarProperty Name="Ali_PublicKey" ColumnName="Ali_PublicKey" />
+          <ScalarProperty Name="Ali_Private" ColumnName="Ali_Private" />
+          <ScalarProperty Name="Ali_AppId" ColumnName="Ali_AppId" />
+          <ScalarProperty Name="Agora_Key" ColumnName="Agora_Key" />
+          <ScalarProperty Name="GaoDeKey" ColumnName="GaoDeKey" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cfgAreaInfo">
+      <EntityTypeMapping TypeName="HomeCare.cfgAreaInfo">
+        <MappingFragment StoreEntitySet="cfgAreaInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NodeName" ColumnName="NodeName" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="ParentIdList" ColumnName="ParentIdList" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="TreePath" ColumnName="TreePath" />
+          <ScalarProperty Name="TreeLevel" ColumnName="TreeLevel" />
+          <ScalarProperty Name="Service" ColumnName="Service" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cfgCategory">
+      <EntityTypeMapping TypeName="HomeCare.cfgCategory">
+        <MappingFragment StoreEntitySet="cfgCategory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="ParentIdList" ColumnName="ParentIdList" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cfgSite">
+      <EntityTypeMapping TypeName="HomeCare.cfgSite">
+        <MappingFragment StoreEntitySet="cfgSite">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserAgreement" ColumnName="UserAgreement" />
+          <ScalarProperty Name="Copyright" ColumnName="Copyright" />
+          <ScalarProperty Name="PoweredBy" ColumnName="PoweredBy" />
+          <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+          <ScalarProperty Name="CustomerPhone" ColumnName="CustomerPhone" />
+          <ScalarProperty Name="AutoEvaluate" ColumnName="AutoEvaluate" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+          <ScalarProperty Name="DefaultCardId" ColumnName="DefaultCardId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqBeiTai_BloodPressure">
+      <EntityTypeMapping TypeName="HomeCare.eqBeiTai_BloodPressure">
+        <MappingFragment StoreEntitySet="eqBeiTai_BloodPressure">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Member_Id" ColumnName="Member_Id" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Test_Time" ColumnName="Test_Time" />
+          <ScalarProperty Name="Systolic" ColumnName="Systolic" />
+          <ScalarProperty Name="Diastolic" ColumnName="Diastolic" />
+          <ScalarProperty Name="Pulse" ColumnName="Pulse" />
+          <ScalarProperty Name="Did" ColumnName="Did" />
+          <ScalarProperty Name="Dtype" ColumnName="Dtype" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqBeiTai_BloodSugar">
+      <EntityTypeMapping TypeName="HomeCare.eqBeiTai_BloodSugar">
+        <MappingFragment StoreEntitySet="eqBeiTai_BloodSugar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Member_Id" ColumnName="Member_Id" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Test_Time" ColumnName="Test_Time" />
+          <ScalarProperty Name="Fpg" ColumnName="Fpg" />
+          <ScalarProperty Name="Meal" ColumnName="Meal" />
+          <ScalarProperty Name="Did" ColumnName="Did" />
+          <ScalarProperty Name="Dtype" ColumnName="Dtype" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqBeiTai_BodyFat">
+      <EntityTypeMapping TypeName="HomeCare.eqBeiTai_BodyFat">
+        <MappingFragment StoreEntitySet="eqBeiTai_BodyFat">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Member_Id" ColumnName="Member_Id" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Test_Time" ColumnName="Test_Time" />
+          <ScalarProperty Name="Moisture" ColumnName="Moisture" />
+          <ScalarProperty Name="Fat_Grade" ColumnName="Fat_Grade" />
+          <ScalarProperty Name="Muscle" ColumnName="Muscle" />
+          <ScalarProperty Name="Fat_Per" ColumnName="Fat_Per" />
+          <ScalarProperty Name="Did" ColumnName="Did" />
+          <ScalarProperty Name="Dtype" ColumnName="Dtype" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqBeiTai_Temp">
+      <EntityTypeMapping TypeName="HomeCare.eqBeiTai_Temp">
+        <MappingFragment StoreEntitySet="eqBeiTai_Temp">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Member_Id" ColumnName="Member_Id" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Test_Time" ColumnName="Test_Time" />
+          <ScalarProperty Name="Temp_Data" ColumnName="Temp_Data" />
+          <ScalarProperty Name="Did" ColumnName="Did" />
+          <ScalarProperty Name="Dtype" ColumnName="Dtype" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqBeiTai_Weight">
+      <EntityTypeMapping TypeName="HomeCare.eqBeiTai_Weight">
+        <MappingFragment StoreEntitySet="eqBeiTai_Weight">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Member_Id" ColumnName="Member_Id" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Test_Time" ColumnName="Test_Time" />
+          <ScalarProperty Name="Weight_Data" ColumnName="Weight_Data" />
+          <ScalarProperty Name="Did" ColumnName="Did" />
+          <ScalarProperty Name="Dtype" ColumnName="Dtype" />
+          <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqEquipment">
+      <EntityTypeMapping TypeName="HomeCare.eqEquipment">
+        <MappingFragment StoreEntitySet="eqEquipment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="Sim" ColumnName="Sim" />
+          <ScalarProperty Name="Elec" ColumnName="Elec" />
+          <ScalarProperty Name="Online" ColumnName="Online" />
+          <ScalarProperty Name="OnlineTime" ColumnName="OnlineTime" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqEquipment_Mattress">
+      <EntityTypeMapping TypeName="HomeCare.eqEquipment_Mattress">
+        <MappingFragment StoreEntitySet="eqEquipment_Mattress">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqEquipment_Watch">
+      <EntityTypeMapping TypeName="HomeCare.eqEquipment_Watch">
+        <MappingFragment StoreEntitySet="eqEquipment_Watch">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="GPSInterval" ColumnName="GPSInterval" />
+          <ScalarProperty Name="SitWarningDuration" ColumnName="SitWarningDuration" />
+          <ScalarProperty Name="HeartRange" ColumnName="HeartRange" />
+          <ScalarProperty Name="SleepRange" ColumnName="SleepRange" />
+          <ScalarProperty Name="HeartRateInterval" ColumnName="HeartRateInterval" />
+          <ScalarProperty Name="IsPosition" ColumnName="IsPosition" />
+          <ScalarProperty Name="DatePosition" ColumnName="DatePosition" />
+          <ScalarProperty Name="LatitudeConv" ColumnName="LatitudeConv" />
+          <ScalarProperty Name="LongitudeConv" ColumnName="LongitudeConv" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ConvertType" ColumnName="ConvertType" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="SOSPhone" ColumnName="SOSPhone" />
+          <ScalarProperty Name="IsHeartRangeStat" ColumnName="IsHeartRangeStat" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqFence">
+      <EntityTypeMapping TypeName="HomeCare.eqFence">
+        <MappingFragment StoreEntitySet="eqFence">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LatLon" ColumnName="LatLon" />
+          <ScalarProperty Name="Radius" ColumnName="Radius" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqHealthData">
+      <EntityTypeMapping TypeName="HomeCare.eqHealthData">
+        <MappingFragment StoreEntitySet="eqHealthData">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="Weight_Data" ColumnName="Weight_Data" />
+          <ScalarProperty Name="WeightTest_Time" ColumnName="WeightTest_Time" />
+          <ScalarProperty Name="Temp_Data" ColumnName="Temp_Data" />
+          <ScalarProperty Name="TempTest_Time" ColumnName="TempTest_Time" />
+          <ScalarProperty Name="Systolic" ColumnName="Systolic" />
+          <ScalarProperty Name="Diastolic" ColumnName="Diastolic" />
+          <ScalarProperty Name="Pulse" ColumnName="Pulse" />
+          <ScalarProperty Name="BloodPressureTest_Time" ColumnName="BloodPressureTest_Time" />
+          <ScalarProperty Name="Moisture" ColumnName="Moisture" />
+          <ScalarProperty Name="Fat_Grade" ColumnName="Fat_Grade" />
+          <ScalarProperty Name="Muscle" ColumnName="Muscle" />
+          <ScalarProperty Name="Fat_Per" ColumnName="Fat_Per" />
+          <ScalarProperty Name="BodyFatTest_Time" ColumnName="BodyFatTest_Time" />
+          <ScalarProperty Name="Fpg" ColumnName="Fpg" />
+          <ScalarProperty Name="FpgTest_Time" ColumnName="FpgTest_Time" />
+          <ScalarProperty Name="HeartRate" ColumnName="HeartRate" />
+          <ScalarProperty Name="HeartRateTest_Time" ColumnName="HeartRateTest_Time" />
+          <ScalarProperty Name="TrunOver" ColumnName="TrunOver" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="SleepTest_Time" ColumnName="SleepTest_Time" />
+          <ScalarProperty Name="Steps" ColumnName="Steps" />
+          <ScalarProperty Name="StepsTest_Time" ColumnName="StepsTest_Time" />
+          <ScalarProperty Name="SitTime" ColumnName="SitTime" />
+          <ScalarProperty Name="SitTime_Time" ColumnName="SitTime_Time" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqLocation">
+      <EntityTypeMapping TypeName="HomeCare.eqLocation">
+        <MappingFragment StoreEntitySet="eqLocation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="IsPosition" ColumnName="IsPosition" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="Altitude" ColumnName="Altitude" />
+          <ScalarProperty Name="BaseStation" ColumnName="BaseStation" />
+          <ScalarProperty Name="WiFi" ColumnName="WiFi" />
+          <ScalarProperty Name="Elec" ColumnName="Elec" />
+          <ScalarProperty Name="Gsensor" ColumnName="Gsensor" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="LatitudeConv" ColumnName="LatitudeConv" />
+          <ScalarProperty Name="LongitudeConv" ColumnName="LongitudeConv" />
+          <ScalarProperty Name="FenceWarn" ColumnName="FenceWarn" />
+          <ScalarProperty Name="FenceId" ColumnName="FenceId" />
+          <ScalarProperty Name="StayDate" ColumnName="StayDate" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqMattress_Data">
+      <EntityTypeMapping TypeName="HomeCare.eqMattress_Data">
+        <MappingFragment StoreEntitySet="eqMattress_Data">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="MarkTime" ColumnName="MarkTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqWarning">
+      <EntityTypeMapping TypeName="HomeCare.eqWarning">
+        <MappingFragment StoreEntitySet="eqWarning">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqWatch_Heart">
+      <EntityTypeMapping TypeName="HomeCare.eqWatch_Heart">
+        <MappingFragment StoreEntitySet="eqWatch_Heart">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="HeartRate" ColumnName="HeartRate" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqWatch_OutlineData">
+      <EntityTypeMapping TypeName="HomeCare.eqWatch_OutlineData">
+        <MappingFragment StoreEntitySet="eqWatch_OutlineData">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="SOSCmd" ColumnName="SOSCmd" />
+          <ScalarProperty Name="FamilyCmd" ColumnName="FamilyCmd" />
+          <ScalarProperty Name="GPSIntervalCmd" ColumnName="GPSIntervalCmd" />
+          <ScalarProperty Name="HeartRateIntervalCmd" ColumnName="HeartRateIntervalCmd" />
+          <ScalarProperty Name="SleepRangeCmd" ColumnName="SleepRangeCmd" />
+          <ScalarProperty Name="RemindCustom1Cmd" ColumnName="RemindCustom1Cmd" />
+          <ScalarProperty Name="RemindCustom2Cmd" ColumnName="RemindCustom2Cmd" />
+          <ScalarProperty Name="RemindCustom3Cmd" ColumnName="RemindCustom3Cmd" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqWatch_Remind">
+      <EntityTypeMapping TypeName="HomeCare.eqWatch_Remind">
+        <MappingFragment StoreEntitySet="eqWatch_Remind">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="RemindType" ColumnName="RemindType" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="Weeks" ColumnName="Weeks" />
+          <ScalarProperty Name="RemindTimes" ColumnName="RemindTimes" />
+          <ScalarProperty Name="Repeat" ColumnName="Repeat" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="VoiceFile" ColumnName="VoiceFile" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqWatch_Sit">
+      <EntityTypeMapping TypeName="HomeCare.eqWatch_Sit">
+        <MappingFragment StoreEntitySet="eqWatch_Sit">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="Sit" ColumnName="Sit" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqWatch_Sleep">
+      <EntityTypeMapping TypeName="HomeCare.eqWatch_Sleep">
+        <MappingFragment StoreEntitySet="eqWatch_Sleep">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="ShallowSleepTime" ColumnName="ShallowSleepTime" />
+          <ScalarProperty Name="DeepSleepTime" ColumnName="DeepSleepTime" />
+          <ScalarProperty Name="TrunOver" ColumnName="TrunOver" />
+          <ScalarProperty Name="GetUpNum" ColumnName="GetUpNum" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eqWatch_Step">
+      <EntityTypeMapping TypeName="HomeCare.eqWatch_Step">
+        <MappingFragment StoreEntitySet="eqWatch_Step">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imei" ColumnName="Imei" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="Steps" ColumnName="Steps" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="Calories" ColumnName="Calories" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infoAdvert">
+      <EntityTypeMapping TypeName="HomeCare.infoAdvert">
+        <MappingFragment StoreEntitySet="infoAdvert">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Reads" ColumnName="Reads" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infoAppVersion">
+      <EntityTypeMapping TypeName="HomeCare.infoAppVersion">
+        <MappingFragment StoreEntitySet="infoAppVersion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AppType" ColumnName="AppType" />
+          <ScalarProperty Name="VersionNum" ColumnName="VersionNum" />
+          <ScalarProperty Name="AppUrl" ColumnName="AppUrl" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infoArticle">
+      <EntityTypeMapping TypeName="HomeCare.infoArticle">
+        <MappingFragment StoreEntitySet="infoArticle">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="keyWords" ColumnName="keyWords" />
+          <ScalarProperty Name="Reads" ColumnName="Reads" />
+          <ScalarProperty Name="Recommend" ColumnName="Recommend" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infoArticleTags">
+      <EntityTypeMapping TypeName="HomeCare.infoArticleTags">
+        <MappingFragment StoreEntitySet="infoArticleTags">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infoFile">
+      <EntityTypeMapping TypeName="HomeCare.infoFile">
+        <MappingFragment StoreEntitySet="infoFile">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="Extend" ColumnName="Extend" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="FromTable" ColumnName="FromTable" />
+          <ScalarProperty Name="FromId" ColumnName="FromId" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infoMedicine">
+      <EntityTypeMapping TypeName="HomeCare.infoMedicine">
+        <MappingFragment StoreEntitySet="infoMedicine">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="MedicineName" ColumnName="MedicineName" />
+          <ScalarProperty Name="MedicineUnit" ColumnName="MedicineUnit" />
+          <ScalarProperty Name="MedicineUsed" ColumnName="MedicineUsed" />
+          <ScalarProperty Name="MedicineTotal" ColumnName="MedicineTotal" />
+          <ScalarProperty Name="MedicineSurplus" ColumnName="MedicineSurplus" />
+          <ScalarProperty Name="StarDate" ColumnName="StarDate" />
+          <ScalarProperty Name="RemindDate" ColumnName="RemindDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infoMedicine_AddLog">
+      <EntityTypeMapping TypeName="HomeCare.infoMedicine_AddLog">
+        <MappingFragment StoreEntitySet="infoMedicine_AddLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MedicineId" ColumnName="MedicineId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsRemind" ColumnName="IsRemind" />
+          <ScalarProperty Name="MedicineUnit" ColumnName="MedicineUnit" />
+          <ScalarProperty Name="MedicineTotal" ColumnName="MedicineTotal" />
+          <ScalarProperty Name="MedicineSurplus" ColumnName="MedicineSurplus" />
+          <ScalarProperty Name="Doses" ColumnName="Doses" />
+          <ScalarProperty Name="RemainNum" ColumnName="RemainNum" />
+          <ScalarProperty Name="TakingNum" ColumnName="TakingNum" />
+          <ScalarProperty Name="TakingUnit" ColumnName="TakingUnit" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infoMedicine_ChangeLog">
+      <EntityTypeMapping TypeName="HomeCare.infoMedicine_ChangeLog">
+        <MappingFragment StoreEntitySet="infoMedicine_ChangeLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MedicineId" ColumnName="MedicineId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="MedicineChange" ColumnName="MedicineChange" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infoMessage">
+      <EntityTypeMapping TypeName="HomeCare.infoMessage">
+        <MappingFragment StoreEntitySet="infoMessage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="ObjectId" ColumnName="ObjectId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="SendId" ColumnName="SendId" />
+          <ScalarProperty Name="SendToAll" ColumnName="SendToAll" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infoMessageUser">
+      <EntityTypeMapping TypeName="HomeCare.infoMessageUser">
+        <MappingFragment StoreEntitySet="infoMessageUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logUser">
+      <EntityTypeMapping TypeName="HomeCare.logUser">
+        <MappingFragment StoreEntitySet="logUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pmAccount">
+      <EntityTypeMapping TypeName="HomeCare.pmAccount">
+        <MappingFragment StoreEntitySet="pmAccount">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountPassword" ColumnName="AccountPassword" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="TokenTime" ColumnName="TokenTime" />
+          <ScalarProperty Name="TokenOutTime" ColumnName="TokenOutTime" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pmFeedback">
+      <EntityTypeMapping TypeName="HomeCare.pmFeedback">
+        <MappingFragment StoreEntitySet="pmFeedback">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobliePhone" ColumnName="MobliePhone" />
+          <ScalarProperty Name="ContentsReply" ColumnName="ContentsReply" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pmInfo_Doctor">
+      <EntityTypeMapping TypeName="HomeCare.pmInfo_Doctor">
+        <MappingFragment StoreEntitySet="pmInfo_Doctor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="HeadImg" ColumnName="HeadImg" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="ReservationMoney" ColumnName="ReservationMoney" />
+          <ScalarProperty Name="Specialty" ColumnName="Specialty" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pmInfo_Elderly">
+      <EntityTypeMapping TypeName="HomeCare.pmInfo_Elderly">
+        <MappingFragment StoreEntitySet="pmInfo_Elderly">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="ElderlyType" ColumnName="ElderlyType" />
+          <ScalarProperty Name="ElderlyName" ColumnName="ElderlyName" />
+          <ScalarProperty Name="ElderlyNo" ColumnName="ElderlyNo" />
+          <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="BornYM" ColumnName="BornYM" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="HeadImg" ColumnName="HeadImg" />
+          <ScalarProperty Name="BloodType" ColumnName="BloodType" />
+          <ScalarProperty Name="NurseRequires" ColumnName="NurseRequires" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="AreaInfo" ColumnName="AreaInfo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="ContactTelephone" ColumnName="ContactTelephone" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Groupid" ColumnName="Groupid" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pmInfo_User">
+      <EntityTypeMapping TypeName="HomeCare.pmInfo_User">
+        <MappingFragment StoreEntitySet="pmInfo_User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+          <ScalarProperty Name="Birth" ColumnName="Birth" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="HeadImg" ColumnName="HeadImg" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pmPersonalService">
+      <EntityTypeMapping TypeName="HomeCare.pmPersonalService">
+        <MappingFragment StoreEntitySet="pmPersonalService">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="ContactTelephone" ColumnName="ContactTelephone" />
+          <ScalarProperty Name="HeadImg" ColumnName="HeadImg" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Specialty" ColumnName="Specialty" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pmPersonalService_Elderly">
+      <EntityTypeMapping TypeName="HomeCare.pmPersonalService_Elderly">
+        <MappingFragment StoreEntitySet="pmPersonalService_Elderly">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="PersonalServList" ColumnName="PersonalServList" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pmProject">
+      <EntityTypeMapping TypeName="HomeCare.pmProject">
+        <MappingFragment StoreEntitySet="pmProject">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pmRelation">
+      <EntityTypeMapping TypeName="HomeCare.pmRelation">
+        <MappingFragment StoreEntitySet="pmRelation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pmSettlement">
+      <EntityTypeMapping TypeName="HomeCare.pmSettlement">
+        <MappingFragment StoreEntitySet="pmSettlement">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SettlementNo" ColumnName="SettlementNo" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="OrderIds" ColumnName="OrderIds" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="PaidToWaiter" ColumnName="PaidToWaiter" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pmTag">
+      <EntityTypeMapping TypeName="HomeCare.pmTag">
+        <MappingFragment StoreEntitySet="pmTag">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="TagId" ColumnName="TagId" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reportCheckUp">
+      <EntityTypeMapping TypeName="HomeCare.reportCheckUp">
+        <MappingFragment StoreEntitySet="reportCheckUp">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="DateCheckUp" ColumnName="DateCheckUp" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reportChronicDisease">
+      <EntityTypeMapping TypeName="HomeCare.reportChronicDisease">
+        <MappingFragment StoreEntitySet="reportChronicDisease">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="DateReport" ColumnName="DateReport" />
+          <ScalarProperty Name="BloodPressure" ColumnName="BloodPressure" />
+          <ScalarProperty Name="BloodSugar" ColumnName="BloodSugar" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="BodyFat" ColumnName="BodyFat" />
+          <ScalarProperty Name="DoctorReport" ColumnName="DoctorReport" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reportDaily">
+      <EntityTypeMapping TypeName="HomeCare.reportDaily">
+        <MappingFragment StoreEntitySet="reportDaily">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="DateReport" ColumnName="DateReport" />
+          <ScalarProperty Name="Steps" ColumnName="Steps" />
+          <ScalarProperty Name="Sleeps" ColumnName="Sleeps" />
+          <ScalarProperty Name="Heart" ColumnName="Heart" />
+          <ScalarProperty Name="Sit" ColumnName="Sit" />
+          <ScalarProperty Name="Custody" ColumnName="Custody" />
+          <ScalarProperty Name="HealthReport" ColumnName="HealthReport" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reportMedicalHistory">
+      <EntityTypeMapping TypeName="HomeCare.reportMedicalHistory">
+        <MappingFragment StoreEntitySet="reportMedicalHistory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="MedicalHistory" ColumnName="MedicalHistory" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="DurationTime" ColumnName="DurationTime" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reportNursing">
+      <EntityTypeMapping TypeName="HomeCare.reportNursing">
+        <MappingFragment StoreEntitySet="reportNursing">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="DateReport" ColumnName="DateReport" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servCallLog">
+      <EntityTypeMapping TypeName="HomeCare.servCallLog">
+        <MappingFragment StoreEntitySet="servCallLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CallType" ColumnName="CallType" />
+          <ScalarProperty Name="CallNumber" ColumnName="CallNumber" />
+          <ScalarProperty Name="CallDate" ColumnName="CallDate" />
+          <ScalarProperty Name="CallById" ColumnName="CallById" />
+          <ScalarProperty Name="CallToId" ColumnName="CallToId" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servCard">
+      <EntityTypeMapping TypeName="HomeCare.servCard">
+        <MappingFragment StoreEntitySet="servCard">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardName" ColumnName="CardName" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ValidTime" ColumnName="ValidTime" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servCard_Elderly">
+      <EntityTypeMapping TypeName="HomeCare.servCard_Elderly">
+        <MappingFragment StoreEntitySet="servCard_Elderly">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="CardId" ColumnName="CardId" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servCard_ElderlyProject">
+      <EntityTypeMapping TypeName="HomeCare.servCard_ElderlyProject">
+        <MappingFragment StoreEntitySet="servCard_ElderlyProject">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="TimesFree" ColumnName="TimesFree" />
+          <ScalarProperty Name="TimesUnit" ColumnName="TimesUnit" />
+          <ScalarProperty Name="TimesUsed" ColumnName="TimesUsed" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servCard_Project">
+      <EntityTypeMapping TypeName="HomeCare.servCard_Project">
+        <MappingFragment StoreEntitySet="servCard_Project">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardId" ColumnName="CardId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="TimesFree" ColumnName="TimesFree" />
+          <ScalarProperty Name="TimesUnit" ColumnName="TimesUnit" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servOrder">
+      <EntityTypeMapping TypeName="HomeCare.servOrder">
+        <MappingFragment StoreEntitySet="servOrder">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="WaiterId" ColumnName="WaiterId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="DateService" ColumnName="DateService" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="PaidTotal" ColumnName="PaidTotal" />
+          <ScalarProperty Name="IsSignIn" ColumnName="IsSignIn" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="PaidType" ColumnName="PaidType" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PaidToWaiter" ColumnName="PaidToWaiter" />
+          <ScalarProperty Name="DateSuccess" ColumnName="DateSuccess" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servOrder_Evaluate">
+      <EntityTypeMapping TypeName="HomeCare.servOrder_Evaluate">
+        <MappingFragment StoreEntitySet="servOrder_Evaluate">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="WaiterId" ColumnName="WaiterId" />
+          <ScalarProperty Name="Evaluate" ColumnName="Evaluate" />
+          <ScalarProperty Name="EvaluateTags" ColumnName="EvaluateTags" />
+          <ScalarProperty Name="EvaluateScore" ColumnName="EvaluateScore" />
+          <ScalarProperty Name="EvaluateDate" ColumnName="EvaluateDate" />
+          <ScalarProperty Name="WaiterEvaluate" ColumnName="WaiterEvaluate" />
+          <ScalarProperty Name="WaiterEvaluateTags" ColumnName="WaiterEvaluateTags" />
+          <ScalarProperty Name="WaiterEvaluateScore" ColumnName="WaiterEvaluateScore" />
+          <ScalarProperty Name="WaiterEvaluateDate" ColumnName="WaiterEvaluateDate" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servOrder_Project">
+      <EntityTypeMapping TypeName="HomeCare.servOrder_Project">
+        <MappingFragment StoreEntitySet="servOrder_Project">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Free" ColumnName="Free" />
+          <ScalarProperty Name="TimeService" ColumnName="TimeService" />
+          <ScalarProperty Name="TimeUnit" ColumnName="TimeUnit" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PriceUnit" ColumnName="PriceUnit" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servOrder_Waiter">
+      <EntityTypeMapping TypeName="HomeCare.servOrder_Waiter">
+        <MappingFragment StoreEntitySet="servOrder_Waiter">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="WaiterId" ColumnName="WaiterId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+          <ScalarProperty Name="CheckInLoaction" ColumnName="CheckInLoaction" />
+          <ScalarProperty Name="CheckInImg" ColumnName="CheckInImg" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+          <ScalarProperty Name="CheckOutLoaction" ColumnName="CheckOutLoaction" />
+          <ScalarProperty Name="CheckOutImg" ColumnName="CheckOutImg" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servProject">
+      <EntityTypeMapping TypeName="HomeCare.servProject">
+        <MappingFragment StoreEntitySet="servProject">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProjectType" ColumnName="ProjectType" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PriceUnit" ColumnName="PriceUnit" />
+          <ScalarProperty Name="IsSignIn" ColumnName="IsSignIn" />
+          <ScalarProperty Name="IsSelect" ColumnName="IsSelect" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servReservation">
+      <EntityTypeMapping TypeName="HomeCare.servReservation">
+        <MappingFragment StoreEntitySet="servReservation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="ReservationDate" ColumnName="ReservationDate" />
+          <ScalarProperty Name="StarTime" ColumnName="StarTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ReservationNum" ColumnName="ReservationNum" />
+          <ScalarProperty Name="RemainNum" ColumnName="RemainNum" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servVisit">
+      <EntityTypeMapping TypeName="HomeCare.servVisit">
+        <MappingFragment StoreEntitySet="servVisit">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="BelongId" ColumnName="BelongId" />
+          <ScalarProperty Name="BelongIds" ColumnName="BelongIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="HomeCare.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysFunctions">
+      <EntityTypeMapping TypeName="HomeCare.SysFunctions">
+        <MappingFragment StoreEntitySet="SysFunctions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PFid" ColumnName="PFid" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="FUrl" ColumnName="FUrl" />
+          <ScalarProperty Name="FQuary" ColumnName="FQuary" />
+          <ScalarProperty Name="FButtonId" ColumnName="FButtonId" />
+          <ScalarProperty Name="FRemark" ColumnName="FRemark" />
+          <ScalarProperty Name="FState" ColumnName="FState" />
+          <ScalarProperty Name="FSort" ColumnName="FSort" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysRoles">
+      <EntityTypeMapping TypeName="HomeCare.SysRoles">
+        <MappingFragment StoreEntitySet="SysRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Fids" ColumnName="Fids" />
+          <ScalarProperty Name="Reads" ColumnName="Reads" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysUser_Roles">
+      <EntityTypeMapping TypeName="HomeCare.SysUser_Roles">
+        <MappingFragment StoreEntitySet="SysUser_Roles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="Rids" ColumnName="Rids" />
+          <ScalarProperty Name="CreateById" ColumnName="CreateById" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateById" ColumnName="UpdateById" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

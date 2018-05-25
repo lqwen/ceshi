@@ -1,0 +1,1519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HomeCare" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cfgApp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="AppName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AppLogo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="HuanXin_Key" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HuanXin_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HuanXin_Secret" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Jpush_Key" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Jpush_Secret" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WeiXin_AppId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WeiXin_MchId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WeiXin_Key" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WeiXin_Secret" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WeiXin_Ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Ali_PublicKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ali_Private" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ali_AppId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Agora_Key" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GaoDeKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cfgAreaInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NodeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParentId" Type="Int32" Nullable="false" />
+    <Property Name="ParentIdList" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="Int32" Nullable="false" />
+    <Property Name="TreePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TreeLevel" Type="Int32" Nullable="false" />
+    <Property Name="Service" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cfgCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Icon" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="Int32" Nullable="false" />
+    <Property Name="ParentIdList" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sort" Type="Byte" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cfgSite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Keywords" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserAgreement" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Copyright" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PoweredBy" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecordNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CustomerPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AutoEvaluate" Type="Int32" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DefaultCardId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqBeiTai_BloodPressure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Member_Id" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Result" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Test_Time" Type="DateTime" Precision="3" />
+    <Property Name="Systolic" Type="Double" Nullable="false" />
+    <Property Name="Diastolic" Type="Double" Nullable="false" />
+    <Property Name="Pulse" Type="Double" Nullable="false" />
+    <Property Name="Did" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dtype" Type="Int32" />
+    <Property Name="IdCard" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqBeiTai_BloodSugar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Member_Id" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Result" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Test_Time" Type="DateTime" Precision="3" />
+    <Property Name="Fpg" Type="Double" Nullable="false" />
+    <Property Name="Meal" Type="Byte" Nullable="false" />
+    <Property Name="Did" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dtype" Type="Int32" />
+    <Property Name="IdCard" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqBeiTai_BodyFat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Member_Id" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Result" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Test_Time" Type="DateTime" Precision="3" />
+    <Property Name="Moisture" Type="Double" Nullable="false" />
+    <Property Name="Fat_Grade" Type="Double" Nullable="false" />
+    <Property Name="Muscle" Type="Double" Nullable="false" />
+    <Property Name="Fat_Per" Type="Double" Nullable="false" />
+    <Property Name="Did" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dtype" Type="Int32" />
+    <Property Name="IdCard" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqBeiTai_Temp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Member_Id" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Result" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Test_Time" Type="DateTime" Precision="3" />
+    <Property Name="Temp_Data" Type="Double" Nullable="false" />
+    <Property Name="Did" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dtype" Type="Int32" />
+    <Property Name="IdCard" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqBeiTai_Weight">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Member_Id" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Result" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Test_Time" Type="DateTime" Precision="3" />
+    <Property Name="Weight_Data" Type="Double" Nullable="false" />
+    <Property Name="Did" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dtype" Type="Int32" />
+    <Property Name="IdCard" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqEquipment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Imei" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sim" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Elec" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Online" Type="Boolean" Nullable="false" />
+    <Property Name="OnlineTime" Type="DateTime" Precision="3" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqEquipment_Mattress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Imei" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="eqEquipment_Watch">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imei" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GPSInterval" Type="Int32" Nullable="false" />
+    <Property Name="SitWarningDuration" Type="Int32" />
+    <Property Name="HeartRange" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SleepRange" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HeartRateInterval" Type="Int32" Nullable="false" />
+    <Property Name="IsPosition" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DatePosition" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LatitudeConv" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LongitudeConv" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConvertType" Type="Byte" Nullable="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SOSPhone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsHeartRangeStat" Type="Boolean" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="eqFence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LatLon" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Radius" Type="Int32" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="Type" Type="Byte" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="eqHealthData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="Weight_Data" Type="Double" Nullable="false" />
+    <Property Name="WeightTest_Time" Type="DateTime" Precision="3" />
+    <Property Name="Temp_Data" Type="Double" Nullable="false" />
+    <Property Name="TempTest_Time" Type="DateTime" Precision="3" />
+    <Property Name="Systolic" Type="Double" Nullable="false" />
+    <Property Name="Diastolic" Type="Double" Nullable="false" />
+    <Property Name="Pulse" Type="Double" Nullable="false" />
+    <Property Name="BloodPressureTest_Time" Type="DateTime" Precision="3" />
+    <Property Name="Moisture" Type="Double" Nullable="false" />
+    <Property Name="Fat_Grade" Type="Double" Nullable="false" />
+    <Property Name="Muscle" Type="Double" Nullable="false" />
+    <Property Name="Fat_Per" Type="Double" Nullable="false" />
+    <Property Name="BodyFatTest_Time" Type="DateTime" Precision="3" />
+    <Property Name="Fpg" Type="Double" Nullable="false" />
+    <Property Name="FpgTest_Time" Type="DateTime" Precision="3" />
+    <Property Name="HeartRate" Type="Int32" Nullable="false" />
+    <Property Name="HeartRateTest_Time" Type="DateTime" Precision="3" />
+    <Property Name="TrunOver" Type="Int32" Nullable="false" />
+    <Property Name="Time" Type="Int32" Nullable="false" />
+    <Property Name="SleepTest_Time" Type="DateTime" Precision="3" />
+    <Property Name="Steps" Type="Int32" Nullable="false" />
+    <Property Name="StepsTest_Time" Type="DateTime" Precision="3" />
+    <Property Name="SitTime" Type="Int32" Nullable="false" />
+    <Property Name="SitTime_Time" Type="DateTime" Precision="3" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imei" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="Time" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="IsPosition" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Latitude" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Longitude" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Speed" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Direction" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Altitude" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BaseStation" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="WiFi" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Elec" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Gsensor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LatitudeConv" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LongitudeConv" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FenceWarn" Type="Byte" />
+    <Property Name="FenceId" Type="Int32" />
+    <Property Name="StayDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="eqMattress_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imei" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="DataType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Data" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MarkTime" Type="DateTime" Precision="3" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="eqWarning">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imei" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqWatch_Heart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imei" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="HeartRate" Type="Int32" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqWatch_OutlineData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imei" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SOSCmd" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FamilyCmd" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GPSIntervalCmd" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HeartRateIntervalCmd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SleepRangeCmd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RemindCustom1Cmd" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RemindCustom2Cmd" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RemindCustom3Cmd" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="eqWatch_Remind">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imei" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="RemindType" Type="Int32" Nullable="false" />
+    <Property Name="Contents" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Weeks" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RemindTimes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Repeat" Type="Boolean" />
+    <Property Name="State" Type="Byte" />
+    <Property Name="VoiceFile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="eqWatch_Sit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imei" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="Sit" Type="Int32" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqWatch_Sleep">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imei" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="Time" Type="Int32" Nullable="false" />
+    <Property Name="ShallowSleepTime" Type="Int32" Nullable="false" />
+    <Property Name="DeepSleepTime" Type="Int32" Nullable="false" />
+    <Property Name="TrunOver" Type="Int32" Nullable="false" />
+    <Property Name="GetUpNum" Type="Int32" Nullable="false" />
+    <Property Name="DateStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateEnd" Type="DateTime" Precision="3" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eqWatch_Step">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imei" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="Steps" Type="Int32" Nullable="false" />
+    <Property Name="Distance" Type="Int32" />
+    <Property Name="Calories" Type="Double" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoAdvert">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Url" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Img" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateEnd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="Reads" Type="Int32" Nullable="false" />
+    <Property Name="Sort" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoAppVersion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppType" Type="Byte" Nullable="false" />
+    <Property Name="VersionNum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AppUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoArticle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Author" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Img" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Video" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Summary" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="keyWords" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Reads" Type="Int32" Nullable="false" />
+    <Property Name="Recommend" Type="Boolean" Nullable="false" />
+    <Property Name="Sort" Type="Byte" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoArticleTags">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArticleId" Type="Int32" />
+    <Property Name="CategoryId" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="infoFile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FilePath" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Extend" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Size" Type="Int32" Nullable="false" />
+    <Property Name="FromTable" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FromId" Type="Int32" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoMedicine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="MedicineName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MedicineUnit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MedicineUsed" Type="Int32" Nullable="false" />
+    <Property Name="MedicineTotal" Type="Int32" Nullable="false" />
+    <Property Name="MedicineSurplus" Type="Int32" Nullable="false" />
+    <Property Name="StarDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RemindDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoMedicine_AddLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MedicineId" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="IsRemind" Type="Boolean" Nullable="false" />
+    <Property Name="MedicineUnit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MedicineTotal" Type="Int32" Nullable="false" />
+    <Property Name="MedicineSurplus" Type="Int32" Nullable="false" />
+    <Property Name="Doses" Type="Int32" Nullable="false" />
+    <Property Name="RemainNum" Type="Int32" Nullable="false" />
+    <Property Name="TakingNum" Type="Int32" Nullable="false" />
+    <Property Name="TakingUnit" Type="Byte" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoMedicine_ChangeLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MedicineId" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="MedicineChange" Type="Int32" Nullable="false" />
+    <Property Name="Remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MessageType" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contents" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ObjectId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="SendId" Type="Int32" Nullable="false" />
+    <Property Name="SendToAll" Type="Boolean" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="infoMessageUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="MessageId" Type="Int32" Nullable="false" />
+    <Property Name="IsRead" Type="Boolean" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="logUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="pmAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountType" Type="Byte" Nullable="false" />
+    <Property Name="AccountName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccountPassword" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="Token" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TokenTime" Type="DateTime" Precision="3" />
+    <Property Name="TokenOutTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="pmRelation" Relationship="Self.FK_pmRelation_pmAccount" FromRole="pmAccount" ToRole="pmRelation" />
+  </EntityType>
+  <EntityType Name="pmFeedback">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" />
+    <Property Name="Contents" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobliePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ContentsReply" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmInfo_Doctor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="Contact" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sex" Type="Boolean" Nullable="false" />
+    <Property Name="IDCard" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HeadImg" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Position" Type="Int32" Nullable="false" />
+    <Property Name="Department" Type="Int32" Nullable="false" />
+    <Property Name="ReservationMoney" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Specialty" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Province" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="Int32" Nullable="false" />
+    <Property Name="Area" Type="Int32" Nullable="false" />
+    <Property Name="Street" Type="Int32" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmInfo_Elderly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="ElderlyType" Type="Int32" Nullable="false" />
+    <Property Name="ElderlyName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ElderlyNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDCard" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sex" Type="Boolean" Nullable="false" />
+    <Property Name="Height" Type="Double" Nullable="false" />
+    <Property Name="BornYM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Weight" Type="Double" Nullable="false" />
+    <Property Name="HeadImg" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BloodType" Type="Byte" Nullable="false" />
+    <Property Name="NurseRequires" Type="Int32" Nullable="false" />
+    <Property Name="Province" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="Int32" Nullable="false" />
+    <Property Name="Area" Type="Int32" Nullable="false" />
+    <Property Name="Street" Type="Int32" Nullable="false" />
+    <Property Name="AreaInfo" Type="Int32" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContactTelephone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sort" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Groupid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmInfo_User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="NickName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contact" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sex" Type="Boolean" Nullable="false" />
+    <Property Name="IDCard" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Birth" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HeadImg" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Province" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="Int32" Nullable="false" />
+    <Property Name="Area" Type="Int32" Nullable="false" />
+    <Property Name="Street" Type="Int32" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telephone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmPersonalService">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Contact" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContactTelephone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HeadImg" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Department" Type="Int32" Nullable="false" />
+    <Property Name="Specialty" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="Int32" Nullable="false" />
+    <Property Name="Area" Type="Int32" Nullable="false" />
+    <Property Name="Street" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmPersonalService_Elderly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="PersonalServList" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="servProject" Relationship="Self.FK_pmProject_servProject" FromRole="pmProject" ToRole="servProject" />
+  </EntityType>
+  <EntityType Name="pmRelation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="Relation" Type="Byte" Nullable="false" />
+    <Property Name="ParentId" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="pmAccount" Relationship="Self.FK_pmRelation_pmAccount" FromRole="pmRelation" ToRole="pmAccount" />
+  </EntityType>
+  <EntityType Name="pmSettlement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SettlementNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccountId" Type="Int32" Nullable="false" />
+    <Property Name="OrderIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Paid" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="PaidToWaiter" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pmTag">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="TagId" Type="Int32" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportCheckUp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="DateCheckUp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportChronicDisease">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="DateReport" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BloodPressure" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="BloodSugar" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Temp" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Weight" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="BodyFat" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="DoctorReport" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportDaily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="DateReport" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Steps" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Sleeps" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Heart" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Sit" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Custody" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="HealthReport" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportMedicalHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="MedicalHistory" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DurationTime" Type="Int32" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportNursing">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="DateReport" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tags" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contents" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servCallLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CallType" Type="Byte" Nullable="false" />
+    <Property Name="CallNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CallDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CallById" Type="Int32" Nullable="false" />
+    <Property Name="CallToId" Type="Int32" Nullable="false" />
+    <Property Name="Action" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servCard">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CardName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Icon" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sort" Type="Byte" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="ValidTime" Type="Int32" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servCard_Elderly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CardNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CardId" Type="Int32" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="DateEnd" Type="DateTime" Precision="3" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servCard_ElderlyProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="CardNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="TimesFree" Type="Int32" Nullable="false" />
+    <Property Name="TimesUnit" Type="Byte" />
+    <Property Name="TimesUsed" Type="Int32" Nullable="false" />
+    <Property Name="DateEnd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="State" Type="Byte" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servCard_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CardId" Type="Int32" Nullable="false" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="TimesFree" Type="Int32" Nullable="false" />
+    <Property Name="TimesUnit" Type="Byte" Nullable="false" />
+    <Property Name="Sort" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="servProject" Relationship="Self.FK_cdservCard_Service_seServiceInfo" FromRole="servCard_Project" ToRole="servProject" />
+  </EntityType>
+  <EntityType Name="servOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="WaiterId" Type="Int32" Nullable="false" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="DateService" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Paid" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="PaidTotal" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="IsSignIn" Type="Boolean" Nullable="false" />
+    <Property Name="Province" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="Int32" Nullable="false" />
+    <Property Name="Area" Type="Int32" Nullable="false" />
+    <Property Name="Street" Type="Int32" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contact" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsPaid" Type="Boolean" Nullable="false" />
+    <Property Name="PaidType" Type="Boolean" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="PaidToWaiter" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="DateSuccess" Type="DateTime" Precision="3" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servOrder_Evaluate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="WaiterId" Type="Int32" Nullable="false" />
+    <Property Name="Evaluate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EvaluateTags" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EvaluateScore" Type="Int32" />
+    <Property Name="EvaluateDate" Type="DateTime" Precision="3" />
+    <Property Name="WaiterEvaluate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WaiterEvaluateTags" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WaiterEvaluateScore" Type="Int32" />
+    <Property Name="WaiterEvaluateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servOrder_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="ProjectName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Free" Type="Boolean" Nullable="false" />
+    <Property Name="TimeService" Type="Int32" Nullable="false" />
+    <Property Name="TimeUnit" Type="Byte" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="PriceUnit" Type="Byte" />
+    <Property Name="Paid" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servOrder_Waiter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WaiterId" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CheckIn" Type="DateTime" Precision="3" />
+    <Property Name="CheckInLoaction" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CheckInImg" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CheckOut" Type="DateTime" Precision="3" />
+    <Property Name="CheckOutLoaction" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CheckOutImg" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectType" Type="Byte" />
+    <Property Name="ParentId" Type="Int32" Nullable="false" />
+    <Property Name="ServiceName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Icon" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="PriceUnit" Type="Byte" Nullable="false" />
+    <Property Name="IsSignIn" Type="Boolean" Nullable="false" />
+    <Property Name="IsSelect" Type="Boolean" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="pmProject" Relationship="Self.FK_pmProject_servProject" FromRole="servProject" ToRole="pmProject" />
+    <NavigationProperty Name="servCard_Project" Relationship="Self.FK_cdservCard_Service_seServiceInfo" FromRole="servProject" ToRole="servCard_Project" />
+  </EntityType>
+  <EntityType Name="servReservation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="ReservationDate" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StarTime" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EndTime" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="ReservationNum" Type="Int32" Nullable="false" />
+    <Property Name="RemainNum" Type="Int32" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servVisit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Byte" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="BelongId" Type="Int32" Nullable="false" />
+    <Property Name="BelongIds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SysFunctions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PFid" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FQuary" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FButtonId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FRemark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FState" Type="Int32" />
+    <Property Name="FSort" Type="Int32" />
+    <Property Name="Type" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SysRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="State" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Fids" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Reads" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SysUser_Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="Rids" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateById" Type="Int32" Nullable="false" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateById" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_pmRelation_pmAccount">
+    <End Role="pmAccount" Type="Self.pmAccount" Multiplicity="1" />
+    <End Role="pmRelation" Type="Self.pmRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pmAccount">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="pmRelation">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pmProject_servProject">
+    <End Role="servProject" Type="Self.servProject" Multiplicity="1" />
+    <End Role="pmProject" Type="Self.pmProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servProject">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="pmProject">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cdservCard_Service_seServiceInfo">
+    <End Role="servProject" Type="Self.servProject" Multiplicity="1" />
+    <End Role="servCard_Project" Type="Self.servCard_Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servProject">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="servCard_Project">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cfgApp" EntityType="Self.cfgApp" />
+    <EntitySet Name="cfgAreaInfo" EntityType="Self.cfgAreaInfo" />
+    <EntitySet Name="cfgCategory" EntityType="Self.cfgCategory" />
+    <EntitySet Name="cfgSite" EntityType="Self.cfgSite" />
+    <EntitySet Name="eqBeiTai_BloodPressure" EntityType="Self.eqBeiTai_BloodPressure" />
+    <EntitySet Name="eqBeiTai_BloodSugar" EntityType="Self.eqBeiTai_BloodSugar" />
+    <EntitySet Name="eqBeiTai_BodyFat" EntityType="Self.eqBeiTai_BodyFat" />
+    <EntitySet Name="eqBeiTai_Temp" EntityType="Self.eqBeiTai_Temp" />
+    <EntitySet Name="eqBeiTai_Weight" EntityType="Self.eqBeiTai_Weight" />
+    <EntitySet Name="eqEquipment" EntityType="Self.eqEquipment" />
+    <EntitySet Name="eqEquipment_Mattress" EntityType="Self.eqEquipment_Mattress" />
+    <EntitySet Name="eqEquipment_Watch" EntityType="Self.eqEquipment_Watch" />
+    <EntitySet Name="eqFence" EntityType="Self.eqFence" />
+    <EntitySet Name="eqHealthData" EntityType="Self.eqHealthData" />
+    <EntitySet Name="eqLocation" EntityType="Self.eqLocation" />
+    <EntitySet Name="eqMattress_Data" EntityType="Self.eqMattress_Data" />
+    <EntitySet Name="eqWarning" EntityType="Self.eqWarning" />
+    <EntitySet Name="eqWatch_Heart" EntityType="Self.eqWatch_Heart" />
+    <EntitySet Name="eqWatch_OutlineData" EntityType="Self.eqWatch_OutlineData" />
+    <EntitySet Name="eqWatch_Remind" EntityType="Self.eqWatch_Remind" />
+    <EntitySet Name="eqWatch_Sit" EntityType="Self.eqWatch_Sit" />
+    <EntitySet Name="eqWatch_Sleep" EntityType="Self.eqWatch_Sleep" />
+    <EntitySet Name="eqWatch_Step" EntityType="Self.eqWatch_Step" />
+    <EntitySet Name="infoAdvert" EntityType="Self.infoAdvert" />
+    <EntitySet Name="infoAppVersion" EntityType="Self.infoAppVersion" />
+    <EntitySet Name="infoArticle" EntityType="Self.infoArticle" />
+    <EntitySet Name="infoArticleTags" EntityType="Self.infoArticleTags" />
+    <EntitySet Name="infoFile" EntityType="Self.infoFile" />
+    <EntitySet Name="infoMedicine" EntityType="Self.infoMedicine" />
+    <EntitySet Name="infoMedicine_AddLog" EntityType="Self.infoMedicine_AddLog" />
+    <EntitySet Name="infoMedicine_ChangeLog" EntityType="Self.infoMedicine_ChangeLog" />
+    <EntitySet Name="infoMessage" EntityType="Self.infoMessage" />
+    <EntitySet Name="infoMessageUser" EntityType="Self.infoMessageUser" />
+    <EntitySet Name="logUser" EntityType="Self.logUser" />
+    <EntitySet Name="pmAccount" EntityType="Self.pmAccount" />
+    <EntitySet Name="pmFeedback" EntityType="Self.pmFeedback" />
+    <EntitySet Name="pmInfo_Doctor" EntityType="Self.pmInfo_Doctor" />
+    <EntitySet Name="pmInfo_Elderly" EntityType="Self.pmInfo_Elderly" />
+    <EntitySet Name="pmInfo_User" EntityType="Self.pmInfo_User" />
+    <EntitySet Name="pmPersonalService" EntityType="Self.pmPersonalService" />
+    <EntitySet Name="pmPersonalService_Elderly" EntityType="Self.pmPersonalService_Elderly" />
+    <EntitySet Name="pmProject" EntityType="Self.pmProject" />
+    <EntitySet Name="pmRelation" EntityType="Self.pmRelation" />
+    <EntitySet Name="pmSettlement" EntityType="Self.pmSettlement" />
+    <EntitySet Name="pmTag" EntityType="Self.pmTag" />
+    <EntitySet Name="reportCheckUp" EntityType="Self.reportCheckUp" />
+    <EntitySet Name="reportChronicDisease" EntityType="Self.reportChronicDisease" />
+    <EntitySet Name="reportDaily" EntityType="Self.reportDaily" />
+    <EntitySet Name="reportMedicalHistory" EntityType="Self.reportMedicalHistory" />
+    <EntitySet Name="reportNursing" EntityType="Self.reportNursing" />
+    <EntitySet Name="servCallLog" EntityType="Self.servCallLog" />
+    <EntitySet Name="servCard" EntityType="Self.servCard" />
+    <EntitySet Name="servCard_Elderly" EntityType="Self.servCard_Elderly" />
+    <EntitySet Name="servCard_ElderlyProject" EntityType="Self.servCard_ElderlyProject" />
+    <EntitySet Name="servCard_Project" EntityType="Self.servCard_Project" />
+    <EntitySet Name="servOrder" EntityType="Self.servOrder" />
+    <EntitySet Name="servOrder_Evaluate" EntityType="Self.servOrder_Evaluate" />
+    <EntitySet Name="servOrder_Project" EntityType="Self.servOrder_Project" />
+    <EntitySet Name="servOrder_Waiter" EntityType="Self.servOrder_Waiter" />
+    <EntitySet Name="servProject" EntityType="Self.servProject" />
+    <EntitySet Name="servReservation" EntityType="Self.servReservation" />
+    <EntitySet Name="servVisit" EntityType="Self.servVisit" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="SysFunctions" EntityType="Self.SysFunctions" />
+    <EntitySet Name="SysRoles" EntityType="Self.SysRoles" />
+    <EntitySet Name="SysUser_Roles" EntityType="Self.SysUser_Roles" />
+    <AssociationSet Name="FK_pmRelation_pmAccount" Association="Self.FK_pmRelation_pmAccount">
+      <End Role="pmAccount" EntitySet="pmAccount" />
+      <End Role="pmRelation" EntitySet="pmRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pmProject_servProject" Association="Self.FK_pmProject_servProject">
+      <End Role="servProject" EntitySet="servProject" />
+      <End Role="pmProject" EntitySet="pmProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cdservCard_Service_seServiceInfo" Association="Self.FK_cdservCard_Service_seServiceInfo">
+      <End Role="servProject" EntitySet="servProject" />
+      <End Role="servCard_Project" EntitySet="servCard_Project" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

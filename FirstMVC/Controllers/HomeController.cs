@@ -10,6 +10,7 @@ using FirstMVC.Models;
 
 namespace FirstMVC.Controllers
 {
+    //测试
     public class HomeController : Controller
     {
         private Entities db = new Entities();
